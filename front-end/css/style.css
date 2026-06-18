@@ -1,0 +1,404 @@
+body {
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #111111;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/fundo-tela.png');
+    z-index: -1;
+}
+
+
+
+.Barra {
+    background-color: #2a2c2e;
+    width: 290px;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+}
+
+
+
+.Conteudo {
+    flex: 1;
+    min-width: 300px;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+
+
+.Foto {
+    background-color: #ffffff;
+    height: 230px;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+
+.foto-icone {
+    background-image: url('../Images/foto1.png');
+    width: 90px;
+    height: 101px;
+}
+
+
+
+.texto-foto {
+    color: #000000;
+    font-size: 15px;
+}
+
+
+
+.Titulo .bom-dia {
+    font-size: 35px;
+    letter-spacing: 4px;
+    margin: 0;
+    text-shadow: 0px 3px 0px #3F84F0;
+}
+
+
+
+.Titulo .nome {
+    color: #0F52BA;
+    font-size: 60px;
+    letter-spacing: 4px;
+    margin: 0 0 40px 0;
+    text-shadow: 0px 4px 0px #3F84F0;
+}
+
+
+
+.Menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.Menu a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 25px;
+    letter-spacing: 4px;
+    text-shadow: 0px 3px 0px #3F84F0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+.Menu a:hover, .Menu a.ativado {
+    background-color: #3F84F0;
+    text-shadow: 0px 3px 0px #111111;
+}
+
+
+
+.Menu h2 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
+.Menu h2:before {
+    content: '';
+    display: inline-block;
+    width: 33px;
+    height: 44px;
+    background-image: url('../images/indicador.png');
+    background-size: cover;
+}
+
+
+
+.item-ajustes {
+    margin-top: 120px;
+    margin-bottom: 20px;
+}
+
+
+
+.item-ajustes h2:before {
+    background-image: url('../images/config.png');
+    background-size: 44px 44px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+.bloco-saldo {
+    background-color: #2a2c2e;
+    border: 4px solid #0F52BA;
+    padding: 20px 40px;
+    margin-bottom: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+.bloco-saldo h2 {
+    font-size: 35px;
+    letter-spacing: 4px;
+    margin: 0;
+    text-shadow: 0px 3px 0px #3F84F0;
+}
+
+
+
+.bloco-saldo h1 {
+    color: #3F84F0;
+    font-size: 60px;
+    letter-spacing: 4px;
+    margin: 0;
+    text-shadow: 0px 3px 0px #ffffff;
+}
+
+
+
+.container-blocos-menores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+
+
+.bloco-gastos, .bloco-open {
+    background-color: #2a2c2e;
+    border: 4px solid #0F52BA;
+    flex: 1;
+    min-width: 600px;
+    max-width: 100%;
+    min-height: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+.bloco-gastos h2, .bloco-open h2 {
+    font-size: 35px;
+    letter-spacing: 4px;
+    margin: 0 0 70px 0;
+    text-align: center;
+    text-shadow: 0px 3px 0px #3F84F0;
+}
+
+
+
+.bloco-bancos {
+    background-color: #111111;
+    border: 4px solid #0F52BA;
+    width: 90%;
+    min-width: 280px;
+    height: 100px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+.bloco-bancos:hover {
+    background-color: #3F84F0;
+}
+
+
+
+.bloco-bancos:hover .conteudo-banco, .bloco-bancos:hover .texto-conectar {
+    text-shadow: #111111;
+}
+
+
+
+.conteudo-banco {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 15px;
+    width: 100%;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0px 3px 0px #3F84F0;
+    white-space: nowrap;
+}
+
+
+
+.icone-nubank, .icone-caixa {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(2px);
+    flex-shrink: 0;
+}
+
+
+
+.icone-nubank { background-image: url('../images/icone-nubank.png'); }
+.icone-caixa { background-image: url('../images/icone-caixa.png'); }
+
+
+
+.texto-conectar {
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 0px 3px 0px #3F84F0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+    width: 100%;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+
+.texto-conectar:after {
+    content: '';
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background-image: url('../images/nota.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(2px);
+}
+
+
+
+.titulos-gastos {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    margin-top: 70px;
+    margin-bottom: -15px;
+    text-shadow: 0px 3px 0px #3F84F0;
+}
+
+
+
+.item-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: #3F84F0;
+}
+
+
+
+.titulo-data  { flex: 0.8; }
+.titulo-tipo  { flex: 1.8; }
+.titulo-valor { flex: 1.1; }
+
+
+
+.linha-gasto {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    margin-top: 22px;
+}
+
+
+
+.coluna-data, .coluna-tipo, .coluna-valor {
+    border: 3px solid #0F52BA;
+    background-color: #111111;
+    height: 384px;
+    box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 14px;
+    min-width: 0;
+    overflow: hidden;
+}
+
+
+
+.coluna-data {flex: 0.9;}
+.coluna-tipo {flex: 1.7;}
+.coluna-valor {flex: 1.1;}
+
+
+
+.item-dado {
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    box-sizing: border-box;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+
+.coluna-data .item-dado {
+    text-align: center;
+    padding-left: 5px;
+}
+
+
+
+.coluna-tipo .item-dado, .coluna-valor .item-dado{
+    text-align: left;
+    padding-left: 12px;
+}
